@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>       
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.10.0/dist/web3.min.js"></script>
+
+    <meta charset="utf-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>La Alquimia Analizer</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/pandas-js@0.2.4/dist/index.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ta-lib@0.11.0/index.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+
+        /* Puedes agregar más estilos aquí según sea necesario */
+        h1, h2, table {
+            margin-top: 20px;
+        }
+
+        button {
+            margin-bottom: 10px;
+        }
+
+        /* Estilos para las tablas */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 1px solid white;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #333;
+            color: white;
+        }
+
+        #positiveTable {
+            border-color: red;
+        }
+
+        #negativeTable {
+            border-color: green;
+        }
+    </style>
+    <title>Analyzer</title>
+</head>
+<body>
+    <h1>EMA ANALISIS</h1>
+    <div style="display: flex-row">
+        <button onclick="analyzeCoins()">Analize</button>
+        <h2> Interval </h2>
+        <select id="interval">
+            <option value="1">1 min</option>
+            <option value="5">5 min</option>
+            <option value="15">15 min</option>
+            <option value="30">30 min</option>
+            <option value="60">60 min</option>
+        </select>    
+    </div>
+    <div style="display: flex; flex-wrap: wrap;">
+        <div style="margin-right: 20px;">
+            <h2>Positive EMA Distances</h2>
+            <table id="positiveTable">
+                <thead>
+                    <tr>
+                        <th>Symbol</th>
+                        <th>EMA Distance</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <div>
+            <h2>Negative EMA Distances</h2>
+            <table id="negativeTable">
+                <thead>
+                    <tr>
+                        <th>Symbol</th>
+                        <th>EMA Distance</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+    <script>
+        // Tus scripts aquí
+    </script>
+</body>
+</html>
